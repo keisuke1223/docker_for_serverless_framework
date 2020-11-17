@@ -35,16 +35,11 @@ serverless   python3   Up
 
 ```bash
 $ docker exec -it serverless/ sh
-
-#実行ディレクトリを適宜指定
-$ cd hoge
-
 $ sls invoke locall -f hello
 ```
 
 ### デプロイ
 ```bash
-$ cd hoge
 $ serverless deploy -v
 ```
 

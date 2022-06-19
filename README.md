@@ -5,23 +5,23 @@ https://github.com/syoimin/serverless-cfn
 
 
 ## How to use
-AWSのアクセスキー、シークレットキーをローカルの Mac にセット
+Set up AWS access key and secret access key
 ```bash
 export AWS_ACCESS_KEY_ID=xxxxxxxx-xxxxxx-xxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxx-xxxxxxxxxx
 ```
-※ export コマンドでセットした環境変数は永久保存されないので永久保存したい場合は .bash_profile にセットする
+If you want to permanently store environment variables, set them in .bash_profile
 ```bash
 vi ~/.bash_profile
 export AWS_ACCESS_KEY_ID=xxxxxxxx-xxxxxx-xxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxx-xxxxxxxxxx
 ```
 
-### docker の起動
+### Build docker containers
 ```bash
 docker-compose up -d
 ```
-正常に起動できていれば下記のようになります。
+Startup is complete if you can confirm the following
 
 ```bash
 $ docker-compose ps
@@ -31,14 +31,14 @@ $ docker-compose ps
 serverless   python3   Up      
 ```
 
-### ローカルでの実行方法
+### Execute in the local environment
 
 ```bash
 $ docker exec -it serverless/ sh
 $ sls invoke locall -f hello
 ```
 
-### デプロイ
+### Deploy
 ```bash
 $ serverless deploy -v
 ```
